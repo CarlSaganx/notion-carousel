@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Carousel</title>
+
+  <!-- SwiperJS styles -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+    .swiper {
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      margin: 40px auto;
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f3f3f3;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Swiper container -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="https://via.placeholder.com/600x400?text=Image+1" alt="Image 1"/></div>
+      <div class="swiper-slide"><img src="https://via.placeholder.com/600x400?text=Image+2" alt="Image 2"/></div>
+      <div class="swiper-slide"><img src="https://via.placeholder.com/600x400?text=Image+3" alt="Image 3"/></div>
+    </div>
+
+    <!-- Pagination and navigation -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- SwiperJS scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+  </script>
+</body>
+</html>
